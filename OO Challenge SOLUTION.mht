@@ -1,0 +1,883 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/js-car-oo-exercise/solution/index.html
+Subject: <no title>
+Date: Thu, 22 Sep 2022 18:59:09 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G----"
+
+
+------MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G----
+Content-Type: text/html
+Content-ID: <frame-507DCC3D270501DC62CD8645C52EE3D5@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/js-car-oo-exercise/solution/index.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <title>&lt;no title&gt;</title>
+
+    <link rel=3D"stylesheet" href=3D"https://curric.springboard.com/softwar=
+e-engineering-career-track/default/exercises/js-car-oo-exercise/_static/pyg=
+ments.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://curric.springboard.com/softwar=
+e-engineering-career-track/default/exercises/js-car-oo-exercise/_static/han=
+douts-sphinx.css">
+
+   =20
+    <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,600,=
+700,400italic,600italic,700italic|Source+Code+Pro:400,700" rel=3D"styleshee=
+t" type=3D"text/css">
+   =20
+</head>
+<body>
+<div id=3D"page-wrapper">
+    <div id=3D"page-sidebar">
+        <header>
+            <p class=3D"project">Springboard</p>
+
+            <p class=3D"title">&lt;no title&gt;</p>
+
+            <p class=3D"backlink"><a href=3D"https://curric.springboard.com=
+/software-engineering-career-track/default/exercises/js-car-oo-exercise/sol=
+ution/index.html"> =C2=AB Back to Homepage</a></p>
+
+        </header>
+        <div id=3D"toc">
+            <ul class=3D"simple">
+</ul>
+
+        </div>
+    </div>
+    <div id=3D"page-content">
+       =20
+  <div class=3D"highlight-js notranslate"><div class=3D"highlight"><pre><sp=
+an></span><span class=3D"cm">/** Type of vehicle */</span>
+
+<span class=3D"kr">class</span> <span class=3D"nx">Vehicle</span> <span cla=
+ss=3D"p">{</span>
+  <span class=3D"nx">constructor</span><span class=3D"p">(</span><span clas=
+s=3D"nx">make</span><span class=3D"p">,</span> <span class=3D"nx">model</sp=
+an><span class=3D"p">,</span> <span class=3D"nx">year</span><span class=3D"=
+p">)</span> <span class=3D"p">{</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">make</span> <span class=3D"o">=3D</span> <span class=3D"nx">make</span><=
+span class=3D"p">;</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">model</span> <span class=3D"o">=3D</span> <span class=3D"nx">model</span=
+><span class=3D"p">;</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">year</span> <span class=3D"o">=3D</span> <span class=3D"nx">year</span><=
+span class=3D"p">;</span>
+  <span class=3D"p">}</span>
+
+  <span class=3D"nx">honk</span><span class=3D"p">()</span> <span class=3D"=
+p">{</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"Beep."</span><span =
+class=3D"p">;</span>
+  <span class=3D"p">}</span>
+
+  <span class=3D"nx">toString</span><span class=3D"p">()</span> <span class=
+=3D"p">{</span>
+    <span class=3D"k">return</span> <span class=3D"sb">`The vehicle is a </=
+span><span class=3D"si">${</span><span class=3D"k">this</span><span class=
+=3D"p">.</span><span class=3D"nx">make</span><span class=3D"si">}</span><sp=
+an class=3D"sb"> </span><span class=3D"si">${</span><span class=3D"k">this<=
+/span><span class=3D"p">.</span><span class=3D"nx">model</span><span class=
+=3D"si">}</span><span class=3D"sb"> from </span><span class=3D"si">${</span=
+><span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"nx">=
+year</span><span class=3D"si">}</span><span class=3D"sb">.`</span><span cla=
+ss=3D"p">;</span>
+  <span class=3D"p">}</span>
+<span class=3D"p">}</span>
+
+<span class=3D"cm">/** Cars are a type of vehicle with 4 wheels. */</span>
+
+<span class=3D"kr">class</span> <span class=3D"nx">Car</span> <span class=
+=3D"kr">extends</span> <span class=3D"nx">Vehicle</span> <span class=3D"p">=
+{</span>
+  <span class=3D"nx">constructor</span><span class=3D"p">(</span><span clas=
+s=3D"nx">make</span><span class=3D"p">,</span> <span class=3D"nx">model</sp=
+an><span class=3D"p">,</span> <span class=3D"nx">year</span><span class=3D"=
+p">)</span> <span class=3D"p">{</span>
+    <span class=3D"kr">super</span><span class=3D"p">(</span><span class=3D=
+"nx">make</span><span class=3D"p">,</span> <span class=3D"nx">model</span><=
+span class=3D"p">,</span> <span class=3D"nx">year</span><span class=3D"p">)=
+;</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">numWheels</span> <span class=3D"o">=3D</span> <span class=3D"mi">4</span=
+><span class=3D"p">;</span>
+  <span class=3D"p">}</span>
+<span class=3D"p">}</span>
+
+<span class=3D"cm">/** Cars are a type of vehicle with 2 wheels. */</span>
+
+<span class=3D"kr">class</span> <span class=3D"nx">Motorcycle</span> <span =
+class=3D"kr">extends</span> <span class=3D"nx">Vehicle</span> <span class=
+=3D"p">{</span>
+  <span class=3D"nx">constructor</span><span class=3D"p">(</span><span clas=
+s=3D"nx">make</span><span class=3D"p">,</span> <span class=3D"nx">model</sp=
+an><span class=3D"p">,</span> <span class=3D"nx">year</span><span class=3D"=
+p">)</span> <span class=3D"p">{</span>
+    <span class=3D"kr">super</span><span class=3D"p">(</span><span class=3D=
+"nx">make</span><span class=3D"p">,</span> <span class=3D"nx">model</span><=
+span class=3D"p">,</span> <span class=3D"nx">year</span><span class=3D"p">)=
+;</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">numWheels</span> <span class=3D"o">=3D</span> <span class=3D"mi">2</span=
+><span class=3D"p">;</span>
+  <span class=3D"p">}</span>
+
+  <span class=3D"nx">revEngine</span><span class=3D"p">()</span> <span clas=
+s=3D"p">{</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"VROOM!!!"</span><sp=
+an class=3D"p">;</span>
+  <span class=3D"p">}</span>
+<span class=3D"p">}</span>
+
+<span class=3D"kr">class</span> <span class=3D"nx">Garage</span> <span clas=
+s=3D"p">{</span>
+  <span class=3D"nx">constructor</span><span class=3D"p">(</span><span clas=
+s=3D"nx">capacity</span><span class=3D"p">)</span> <span class=3D"p">{</spa=
+n>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">vehicles</span> <span class=3D"o">=3D</span> <span class=3D"p">[];</span=
+>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">capacity</span> <span class=3D"o">=3D</span> <span class=3D"nx">capacity=
+</span><span class=3D"p">;</span>
+  <span class=3D"p">}</span>
+
+  <span class=3D"nx">add</span><span class=3D"p">(</span><span class=3D"nx"=
+>newVehicle</span><span class=3D"p">)</span> <span class=3D"p">{</span>
+    <span class=3D"k">if</span> <span class=3D"p">(</span><span class=3D"o"=
+>!</span><span class=3D"p">(</span><span class=3D"nx">newVehicle</span> <sp=
+an class=3D"k">instanceof</span> <span class=3D"nx">Vehicle</span><span cla=
+ss=3D"p">))</span> <span class=3D"p">{</span>
+      <span class=3D"k">return</span> <span class=3D"s2">"Only vehicles are=
+ allowed in here!"</span><span class=3D"p">;</span>
+    <span class=3D"p">}</span>
+    <span class=3D"k">if</span> <span class=3D"p">(</span><span class=3D"k"=
+>this</span><span class=3D"p">.</span><span class=3D"nx">vehicles</span><sp=
+an class=3D"p">.</span><span class=3D"nx">length</span> <span class=3D"o">&=
+gt;=3D</span> <span class=3D"k">this</span><span class=3D"p">.</span><span =
+class=3D"nx">capacity</span><span class=3D"p">)</span> <span class=3D"p">{<=
+/span>
+      <span class=3D"k">return</span> <span class=3D"s2">"Sorry, we're full=
+."</span><span class=3D"p">;</span>
+    <span class=3D"p">}</span>
+    <span class=3D"k">this</span><span class=3D"p">.</span><span class=3D"n=
+x">vehicles</span><span class=3D"p">.</span><span class=3D"nx">push</span><=
+span class=3D"p">(</span><span class=3D"nx">newVehicle</span><span class=3D=
+"p">);</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"Vehicle added!"</sp=
+an><span class=3D"p">;</span>
+  <span class=3D"p">}</span>
+<span class=3D"p">}</span>
+</pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+
+=20
+
+</body></html>
+------MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/js-car-oo-exercise/_static/pygments.css
+
+@charset "utf-8";
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(238, 255, 204); }
+
+.highlight .c { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cm { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 112, 32); }
+
+.highlight .cpf { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .c1 { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cs { color: rgb(64, 128, 144); background-color: rgb(255, 240, =
+240); }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(51, 51, 51); }
+
+.highlight .gp { color: rgb(198, 93, 9); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 112, 32); }
+
+.highlight .kr { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kt { color: rgb(144, 32, 0); }
+
+.highlight .m { color: rgb(32, 128, 80); }
+
+.highlight .s { color: rgb(64, 112, 160); }
+
+.highlight .na { color: rgb(64, 112, 160); }
+
+.highlight .nb { color: rgb(0, 112, 32); }
+
+.highlight .nc { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .no { color: rgb(96, 173, 213); }
+
+.highlight .nd { color: rgb(85, 85, 85); font-weight: bold; }
+
+.highlight .ni { color: rgb(213, 85, 55); font-weight: bold; }
+
+.highlight .ne { color: rgb(0, 112, 32); }
+
+.highlight .nf { color: rgb(6, 40, 126); }
+
+.highlight .nl { color: rgb(0, 32, 112); font-weight: bold; }
+
+.highlight .nn { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .nt { color: rgb(6, 40, 115); font-weight: bold; }
+
+.highlight .nv { color: rgb(187, 96, 213); }
+
+.highlight .ow { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(32, 128, 80); }
+
+.highlight .mf { color: rgb(32, 128, 80); }
+
+.highlight .mh { color: rgb(32, 128, 80); }
+
+.highlight .mi { color: rgb(32, 128, 80); }
+
+.highlight .mo { color: rgb(32, 128, 80); }
+
+.highlight .sa { color: rgb(64, 112, 160); }
+
+.highlight .sb { color: rgb(64, 112, 160); }
+
+.highlight .sc { color: rgb(64, 112, 160); }
+
+.highlight .dl { color: rgb(64, 112, 160); }
+
+.highlight .sd { color: rgb(64, 112, 160); font-style: italic; }
+
+.highlight .s2 { color: rgb(64, 112, 160); }
+
+.highlight .se { color: rgb(64, 112, 160); font-weight: bold; }
+
+.highlight .sh { color: rgb(64, 112, 160); }
+
+.highlight .si { color: rgb(112, 160, 208); font-style: italic; }
+
+.highlight .sx { color: rgb(198, 93, 9); }
+
+.highlight .sr { color: rgb(35, 83, 136); }
+
+.highlight .s1 { color: rgb(64, 112, 160); }
+
+.highlight .ss { color: rgb(81, 121, 24); }
+
+.highlight .bp { color: rgb(0, 112, 32); }
+
+.highlight .fm { color: rgb(6, 40, 126); }
+
+.highlight .vc { color: rgb(187, 96, 213); }
+
+.highlight .vg { color: rgb(187, 96, 213); }
+
+.highlight .vi { color: rgb(187, 96, 213); }
+
+.highlight .vm { color: rgb(187, 96, 213); }
+
+.highlight .il { color: rgb(32, 128, 80); }
+------MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/js-car-oo-exercise/_static/handouts-sphinx.css
+
+@charset "utf-8";
+
+body { margin: 0px; background-color: rgb(239, 239, 246); }
+
+#toc { display: none; }
+
+@media (min-width: 1200px) {
+  #page-wrapper { display: flex; }
+  #page-sidebar { display: block; width: 275px; background-color: rgb(72, 7=
+2, 94); color: rgb(221, 221, 221); }
+  #toc { display: block; }
+}
+
+#page-sidebar > header { padding: 1em; text-align: center; color: white; ba=
+ckground-color: rgb(0, 192, 157); }
+
+#page-sidebar a { color: inherit; text-decoration: none; }
+
+#page-sidebar .project { font-size: 90%; }
+
+#page-sidebar .title { font-size: 110%; }
+
+#page-sidebar .backlink { font-size: 70%; }
+
+#toc { padding: 1em; }
+
+#toc ul { list-style: none; margin-left: 0px; padding-left: 0px; }
+
+#toc > ul > li > a { display: none; }
+
+#toc > ul > li > ul > li { margin-bottom: 1em; }
+
+#toc > ul > li > ul > li > ul { padding-left: 1em; font-size: 80%; }
+
+#toc > ul > li > ul > li > ul li { margin-top: 0.5em; }
+
+#page-content { margin: 2em 3% 4em; max-width: 800px; min-height: 100vh; }
+
+@media (min-width: 768px) {
+  #page-content { margin-left: 7%; margin-right: 7%; }
+}
+
+@media (min-width: 1200px) {
+  #page-content { margin-left: 100px; margin-right: auto; width: 800px; }
+}
+
+@media print {
+  #page-sidebar { display: none; }
+  #page-content { margin-top: 0px; margin-left: 0px; margin-bottom: 0px; wi=
+dth: 100%; }
+}
+
+.field-name { text-align: left; }
+
+.section a { text-decoration: none; }
+
+@media print {
+  .section a::after { content: " <" attr(href) ">"; }
+}
+
+.clear { clear: both; }
+
+.function table { border-bottom: none; }
+
+.function dd { margin-left: 1em; }
+
+.function .field-body { border: none; padding-left: 0px !important; padding=
+-right: 0px !important; margin-bottom: 0px !important; padding-bottom: 0px =
+!important; }
+
+.function .field-body p.last { margin-bottom: 0px; }
+
+.function .field-name { border: none; text-align: right; padding-left: 0px =
+!important; }
+
+.function .field-body ul { margin-top: 0px; padding: 0px; list-style: none;=
+ }
+
+.function .field-body ul li { margin-bottom: 0.5em; }
+
+.function .field-body .first { margin-top: 0px; }
+
+.function code { font-weight: bold; color: inherit !important; border: none=
+ !important; padding: 0px !important; }
+
+table { border: none; border-collapse: collapse; border-spacing: 0px; empty=
+-cells: show; }
+
+table.hlist td { vertical-align: top; }
+
+table.hlist ul { margin-top: 0px; margin-bottom: 0px; }
+
+table.docutils { border-bottom: 1px solid rgb(204, 204, 204); }
+
+table.docutils td, th { border-right: none; border-bottom: none; border-lef=
+t: none; border-image: initial; border-top: 1px solid rgb(204, 204, 204); p=
+adding: 0.3em; margin: 0px; }
+
+.raw-reveal { display: none; }
+
+img.image-border { border: 1px solid black; }
+
+.line-block { margin: 0.5em 0px; }
+
+blockquote { font-style: italic; }
+
+body { font-family: Roboto, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; font-family: Roboto, sans-serif;=
+ }
+
+dt { font-weight: 600; }
+
+pre { font-family: "Source Code Pro", "Andale Mono WT", "Andale Mono", "Luc=
+ida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera=
+ Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Cou=
+rier, monospace; font-size: 90%; }
+
+.highlight { background-color: white; border: 1px solid rgb(221, 221, 221);=
+ margin: 0.2em 0px 0.4em; }
+
+.highlight pre { margin: 0.6em; }
+
+code { color: rgb(231, 76, 60); font-family: "Source Code Pro", "Andale Mon=
+o WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu S=
+ans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", =
+Monaco, "Courier New", Courier, monospace; border: 1px solid rgb(238, 238, =
+238); padding: 0px 5px; font-size: 90%; }
+
+pre.literal-block { background-color: white; border: 1px solid rgb(221, 221=
+, 221); margin: 0.2em 0px 0.4em; padding: 0.6em; }
+
+@media print {
+  body { }
+  code { color: rgb(85, 0, 0); border: 1px solid rgb(204, 204, 204); font-w=
+eight: bold; }
+  .highlight, pre.literal-block { border: 1px solid rgb(221, 221, 221); }
+}
+
+.sidebar { margin-left: 1.5em; float: right; width: 15em; font-size: 90%; }
+
+.sidebar15x { width: 18em; }
+
+.admonition, .sidebar { padding: 0px 1em 0.35em; background-color: rgb(234,=
+ 242, 247); }
+
+@media print {
+  .admonition, .sidebar { border-width: 1px 1px 1px 5px; border-style: soli=
+d; border-color: rgb(204, 204, 204); border-image: initial; }
+}
+
+.admonition.warning { background-color: rgb(250, 237, 220); }
+
+.admonition > p:nth-child(1), .sidebar-title { font-weight: bold; margin: 0=
+px -1em -0.25em; padding: 0.25em 1em; background-color: rgb(122, 176, 206);=
+ color: white; }
+
+.admonition.warning > p:nth-child(1) { background-color: rgb(219, 163, 118)=
+; }
+
+.admonition.note > p:nth-child(1)::before { content: "Note: "; }
+
+.admonition.warning > p:nth-child(1)::before { content: "Warning: "; }
+
+cite { font-weight: 600; }
+
+img.align-right { float: right; }
+
+.code-block-caption { font-style: italic; font-size: 90%; margin-bottom: 0.=
+5em; }
+
+div.highlight, pre.literal-block { max-width: 38em; min-width: 39em; }
+
+.compare div.highlight, .compare pre.literal-block { min-width: 20em; max-w=
+idth: 21em; }
+
+.compare23 > div:first-child div.highlight, .compare23 > div:first-child di=
+v.literal-block, .compare32 > div:last-child div.highlight, .compare32 > di=
+v:last-child div.literal-block { min-width: 14em; max-width: 15em; }
+
+.compare23 > div:last-child div.highlight, .compare23 > div:last-child div.=
+literal-block, .compare32 > div:first-child div.highlight, .compare32 > div=
+:first-child div.literal-block { min-width: 26em; max-width: 27em; }
+
+.compare12 > div:first-child div.highlight, .compare12 > div:first-child di=
+v.literal-block, .compare21 > div:last-child div.highlight, .compare21 > di=
+v:last-child div.literal-block { min-width: 12em; max-width: 13em; }
+
+.compare12 > div:last-child div.highlight, .compare12 > div:last-child div.=
+literal-block, .compare21 > div:first-child div.highlight, .compare21 > div=
+:first-child div.literal-block { min-width: 28em; max-width: 29em; }
+
+h1 { background-image: url("logo.png"); background-repeat: no-repeat; backg=
+round-position: right center; background-size: contain; }
+
+h1 + table.field-list { margin-top: 2em; }
+
+h2 { margin-top: 2em; }
+
+.red { color: rgb(204, 0, 0); font-weight: bold; }
+
+.blue { color: rgb(34, 136, 204); font-weight: bold; }
+
+.inv-red { background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); fon=
+t-weight: bold; }
+
+.orange { color: rgb(255, 136, 0); font-weight: bold; }
+
+.green { color: rgb(51, 187, 51); font-weight: bold; }
+
+.tan { color: rgb(218, 165, 32); font-weight: bold; }
+
+.cyan { color: rgb(0, 204, 204); font-weight: bold; }
+
+.gone { color: rgb(102, 102, 102); text-decoration: line-through; }
+
+.console .highlight { max-width: 45em; border: none; }
+
+pre.literal-block.console, .console .highlight pre { border: 1px solid rgb(=
+221, 221, 221); background-color: rgb(51, 51, 51); color: rgb(221, 221, 221=
+); padding: 1em; border-radius: 0.4em; margin: 1.5em 0px; max-width: 45em; =
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "=
+Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "L=
+iberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace=
+; font-size: 12px; line-height: 1.5; }
+
+kbd { font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Conso=
+le", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mon=
+o", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, mon=
+ospace; }
+
+.console .cmd { font-weight: bold; color: yellow; }
+
+.console a { color: inherit !important; }
+
+.console .red { color: rgb(255, 51, 51); }
+
+.console .blue { color: rgb(68, 170, 255); }
+
+.console .orange { color: rgb(255, 204, 51); }
+
+.console .green { color: rgb(51, 255, 51); }
+
+.console .tan { color: rgb(218, 165, 32); }
+
+.console .cyan { color: rgb(0, 255, 255); }
+
+.console .gone { color: rgb(102, 102, 102); text-decoration: line-through; =
+}
+
+.left { text-align: left; }
+
+dd { margin-bottom: 0.5em !important; }
+
+cite { font-weight: bold; font-style: italic !important; }
+
+.compare > div { width: 49%; display: inline-block; vertical-align: top; }
+
+.compare23 > div:first-child { width: 39%; }
+
+.compare23 > div:last-child { width: 59%; }
+
+.compare32 > div:first-child { width: 59%; }
+
+.compare32 > div:last-child { width: 39%; }
+
+.compare12 > div:first-child { width: 32%; }
+
+.compare12 > div:last-child { width: 65%; }
+
+.compare21 > div:first-child { width: 65%; }
+
+.compare21 > div:last-child { width: 32%; }
+
+.hover-reveal::before { content: "Hover to reveal"; position: absolute; }
+
+.hover-reveal:hover::before { content: ""; }
+
+.hover-reveal > * { visibility: hidden; }
+
+.topic-title { margin-top: 0px; }
+
+.hover-reveal { border: 1px dashed rgb(153, 153, 153); background-color: rg=
+b(238, 238, 238); padding: 1em; margin-bottom: 1em; }
+
+.hover-reveal:hover > * { visibility: visible; }
+
+.hover-reveal:hover { background-color: transparent; }
+
+@media print {
+  .hover-reveal > * { visibility: visible; }
+  .hover-reveal::before { content: ""; }
+  .hover-reveal { border: none; background-color: transparent; padding: 0px=
+; margin-bottom: 1em; }
+  .noprint { display: none !important; }
+  .simple { }
+  .simple li, .simple ol { break-inside: avoid; }
+  .console { background-color: rgb(245, 245, 245) !important; color: rgb(14=
+0, 140, 140) !important; }
+  .console .cmd { color: black; }
+}
+
+#page-content > .section > .section:first-of-type h2 { margin-top: 1em; }
+
+h1 { margin: 0px; padding: 0px; }
+
+ul { padding-left: 1.5em; list-style: disc; }
+
+ul.simple li { margin: 0.5em 0px; }
+
+.hlist ul { margin-right: 5em; }
+
+dt { margin-bottom: 0.25em; }
+
+dd { margin-left: 1.5em; }
+
+dd > p.first { margin-top: 0px; }
+
+.td-center th:not(:first-child), .td-center td:not(:first-child) { text-ali=
+gn: center; }
+
+.td-right th:not(:first-child), .td-right td:not(:first-child) { text-align=
+: right; }
+------MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Roboto:400,600,700,400italic,600italic,700italic|Source+Code+Pro:400,700
+
+@charset "utf-8";
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xFIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, =
+U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xMIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4=
+B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xEIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xLIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xHIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129,=
+ U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xGIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U=
++2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzIXKMny.=
+woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC=
+, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,=
+ U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic3CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20=
+B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic-CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491,=
+ U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic2CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic5CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic1CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-=
+129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic0CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EF=
+F, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsTYl=
+4BO.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB=
+-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2=
+193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2=
+DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-=
+4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+=
+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+20=
+20, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.wo=
+ff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, =
+U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U=
++2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4,=
+ U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+=
+4B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129=
+, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, =
+U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6l=
+Q.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2=
+BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+219=
+3, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMOvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+460=
+-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlOevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+301=
+, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+1F0=
+0-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+370=
+-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+102=
+-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U=
++20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlM-vWnsUnxlC9.woff2") format("woff2"); unicode-range: U+100=
+-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-=
+2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2") format("woff2"); unicode-range: U+0-FF,=
+ U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+2=
+0AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMOvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+460=
+-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlOevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+301=
+, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+1F0=
+0-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+370=
+-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+102=
+-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U=
++20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlM-vWnsUnxlC9.woff2") format("woff2"); unicode-range: U+100=
+-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-=
+2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2") format("woff2"); unicode-range: U+0-FF,=
+ U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+2=
+0AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--CtQ8ukPnvgdnBrVXQFsdF061AuwYtbwvFpfU6Npe0G------
