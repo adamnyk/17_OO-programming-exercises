@@ -47,18 +47,19 @@ class Garage {
         this.vehicles = [];
         this.capacity = capacity;
     }
-    add(vehicle) {
-        if (this.vehicles.length === this.capacity) {
+    add(newVehicle) {
+        if (this.vehicles.length >= this.capacity) {
             return "Sorry, we're full.";
         }
-        if (vehicle.__proto__.__proto__.name && 
-            vehicle.constructor.name !== 'Vehicle') {
+        if (!(newVehicle instanceof Vehicle))
+        // my first try
+        // if (newVehicle.__proto__.__proto__.name && 
+        //     newVehicle.constructor.name !== 'Vehicle') 
+        {
             return "Only vehicles are allowed in here!";
         }
-        else {
-            this.vehicles.push(vehicle);
-            return 'Vehicle added!';
-        }
+        this.vehicles.push(newVehicle);
+        return 'Vehicle added!';
     }
 }
 
